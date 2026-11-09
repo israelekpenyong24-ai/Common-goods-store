@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8f7f3" />
+  <title>Common Goods — Good things, every day</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">A little something for your everyday <span>✳</span> Free shipping on orders over $75</div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Common Goods home">common<span>goods</span><i>®</i></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#shop">Shop all</a><a href="#shop" data-nav-category="Home">Home</a><a href="#shop" data-nav-category="Style">Style</a><a href="#shop" data-nav-category="Tech">Tech</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" aria-label="Open search"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+      <button class="cart-button" id="open-cart" aria-label="Open shopping bag">Bag <span id="cart-count">0</span></button>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> THE EVERYDAY EDIT · VOL. 04</p>
+        <h1>Good things,<br /><em>found here.</em></h1>
+        <p class="hero-description">Thoughtful finds for the way you live, work, and wind down. A little bit of everything, all in one place.</p>
+        <a class="button button-dark" href="#shop">Explore the edit <span>↗</span></a>
+        <div class="hero-note"><span class="note-mark">✳</span><span>Curated with care.<br /><b>Made for real life.</b></span></div>
+      </div>
+      <div class="hero-art" aria-label="Curated everyday objects">
+        <img src="https://images.unsplash.com/photo-1490312278390-ab64016e0aa9?auto=format&fit=crop&w=1500&q=85" alt="Warm, thoughtfully styled home interior" />
+        <div class="image-tag"><span>THE GOOD LIFE</span><b>Small upgrades.<br />Big everyday joy.</b><i>↗</i></div>
+        <span class="hero-stamp">GOOD<br />STUFF<br /><b>№ 04</b></span>
+      </div>
+      <div class="hero-index">01 <span>—</span> 04</div>
+    </section>
+
+    <section class="ticker" aria-label="Our approach"><div class="ticker-track"><span>BUY LESS, LOVE MORE</span><b>✳</b><span>GOOD THINGS FOR EVERY DAY</span><b>✳</b><span>THOUGHTFULLY PICKED</span><b>✳</b><span>BUY LESS, LOVE MORE</span><b>✳</b><span>GOOD THINGS FOR EVERY DAY</span><b>✳</b><span>THOUGHTFULLY PICKED</span><b>✳</b></div></section>
+
+    <section class="shop-section" id="shop">
+      <div class="section-heading"><div><p class="eyebrow">A GOOD PLACE TO START</p><h2>The good stuff<span>.</span></h2></div><p class="section-aside">Useful, beautiful, and always<br />a little unexpected.</p></div>
+      <div class="shop-toolbar">
+        <div class="filters" role="group" aria-label="Filter products">
+          <button class="filter-chip active" data-category="All">Everything <span>08</span></button>
+          <button class="filter-chip" data-category="Home">Home</button><button class="filter-chip" data-category="Style">Style</button><button class="filter-chip" data-category="Tech">Tech</button><button class="filter-chip" data-category="Everyday">Everyday</button>
+        </div>
+        <label class="search-field"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="Find your thing" aria-label="Search products" /></label>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="empty-state" id="empty-state" hidden>No finds just yet. Try another search.</p>
+      <div class="shop-footer"><span>GOOD FINDS, ZERO FUSS.</span><a href="#shop">You’re right where you need to be ↑</a></div>
+    </section>
+
+    <section class="manifesto"><div class="manifesto-icon">✳</div><p>We believe everyday things<br />should feel a little <em>special.</em></p><a href="#shop">That’s the whole idea <span>↗</span></a><div class="manifesto-side">A SMALL SHOP FOR<br />THE GOOD STUFF</div></section>
+
+    <section class="newsletter"><div><p class="eyebrow">A GOOD EMAIL, EVERY NOW AND THEN</p><h2>Notes from<br /><em>the good side.</em></h2></div><form id="newsletter-form"><label for="email">The occasional new find, good idea, or little treat.</label><div class="email-row"><input id="email" type="email" placeholder="Your email address" required /><button aria-label="Subscribe">↗</button></div><small id="newsletter-message">No noise. Unsubscribe whenever.</small></form></section>
+  </main>
+  <footer class="site-footer"><a class="wordmark" href="#home">common<span>goods</span><i>®</i></a><p>Good things for real life. © 2025 Common Goods.</p><div><a href="#shop">Instagram ↗</a><a href="#home">Back to top ↑</a></div></footer>
+
+  <div class="overlay" id="overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping bag" aria-hidden="true">
+    <div class="drawer-header"><div><p class="eyebrow">YOUR GOOD FINDS</p><h2>Your bag <span id="drawer-count">(0)</span></h2></div><button class="close-button" id="close-cart" aria-label="Close bag">×</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><span>✳</span><h3>Nothing in your bag. Yet.</h3><p>There’s plenty of good stuff to find.</p><button class="button button-dark" id="continue-shopping">Keep looking <span>↗</span></button></div>
+    <div class="drawer-bottom" id="drawer-bottom"><div class="subtotal"><span>Subtotal</span><b id="cart-subtotal">$0.00</b></div><p>Shipping and taxes are figured out at checkout.</p><button class="button button-dark checkout-button">On to checkout <span>↗</span></button></div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>
